@@ -3,10 +3,16 @@ import Listing from './Listing'
 const StoryList = (props) => {
   const { stories } = props
   return (
-    <div>
+    <div className="story-list">
       {stories.map(story => {
-          return <Listing title={story.title} url={story.url}/>
+          return <Listing story={story}/>
         })}
+
+        <style jsx>{`
+        .story-list {
+          padding: 0 1em;
+        }
+      `}</style>
     </div>
   )
 }
